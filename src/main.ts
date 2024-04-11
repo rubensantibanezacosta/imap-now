@@ -71,7 +71,7 @@ export class ImapNow {
  */
     public openBox(mailboxName: string): Promise<Box> {
         return new Promise((resolve, reject) => {
-            this.imap.openBox(mailboxName, true, (err, box) => {
+            this.imap.openBox(mailboxName, false, (err, box) => {
                 if (err) {
                     console.error(`Error opening mailbox ${mailboxName}`);
                     console.error(err);
@@ -371,7 +371,6 @@ export class ImapNow {
                         msg.on('attributes', (attrs) => {
                             message.seen = attrs.flags.includes('\\Seen');
                             message.flags = attrs.flags;
-
                         });
                     });
 
