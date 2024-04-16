@@ -10,8 +10,7 @@
   "types": "dist/types.d.ts",
   "declarationDir": "./dist",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
   "keywords": [
     "imap"
