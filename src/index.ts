@@ -225,17 +225,17 @@ export class ImapNow {
   /**
    * Retrieves the status of a mailbox on the IMAP server.
    * @param {string} mailboxName - The name of the mailbox to retrieve status for.
-   * @returns {Promise<void>} - A promise that resolves when the status is successfully retrieved.
+   * @returns {Promise<Box>} - A promise that resolves when the status is successfully retrieved.
    */
-  public boxStatus(mailboxName: string): Promise<void> {
+  public boxStatus(mailboxName: string): Promise<Box> {
     return new Promise((resolve, reject) => {
-      this.imap.status(mailboxName, (err, _box) => {
+      this.imap.status(mailboxName, (err, box) => {
         if (err) {
           console.error(`Error getting status for mailbox ${mailboxName}`);
           console.error(err);
           reject(err);
         } else {
-          resolve();
+          resolve(box);
         }
       });
     });
