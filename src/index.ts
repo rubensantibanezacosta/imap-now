@@ -395,8 +395,6 @@ export class ImapNow {
             console.error(err);
             reject(err);
           });
-
-
         });
       }
       );
