@@ -591,18 +591,18 @@ var ImapNow = /*#__PURE__*/function () {
   /**
    * Retrieves the status of a mailbox on the IMAP server.
    * @param {string} mailboxName - The name of the mailbox to retrieve status for.
-   * @returns {Promise<void>} - A promise that resolves when the status is successfully retrieved.
+   * @returns {Promise<Box>} - A promise that resolves when the status is successfully retrieved.
    */;
   _proto.boxStatus = function boxStatus(mailboxName) {
     var _this12 = this;
     return new Promise(function (resolve, reject) {
-      _this12.imap.status(mailboxName, function (err, _box) {
+      _this12.imap.status(mailboxName, function (err, box) {
         if (err) {
           console.error("Error getting status for mailbox " + mailboxName);
           console.error(err);
           reject(err);
         } else {
-          resolve();
+          resolve(box);
         }
       });
     });

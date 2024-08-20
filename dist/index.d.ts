@@ -72,9 +72,9 @@ export declare class ImapNow {
     /**
      * Retrieves the status of a mailbox on the IMAP server.
      * @param {string} mailboxName - The name of the mailbox to retrieve status for.
-     * @returns {Promise<void>} - A promise that resolves when the status is successfully retrieved.
+     * @returns {Promise<Box>} - A promise that resolves when the status is successfully retrieved.
      */
-    boxStatus(mailboxName: string): Promise<void>;
+    boxStatus(mailboxName: string): Promise<Box>;
     /**
     * Retrieves the list of mailboxes to which the user is subscribed.
     * @returns {Promise<MailBoxes>} - A promise that resolves to the list of subscribed mailboxes.
