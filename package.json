@@ -18,8 +18,7 @@
     "prepare": "tsdx build",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "postinstall": "--ignore-scripts && npm run build"
-    
+    "postinstall": "npm install --ignore-scripts && npm run build"
   },
   "husky": {
     "hooks": {
