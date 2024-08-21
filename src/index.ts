@@ -1,6 +1,7 @@
 
 
-import Imap, { AppendOptions, Box, MailBoxes } from 'imap';
+import { AppendOptions, Box, MailBoxes } from 'imap';
+import * as Imap from 'imap';
 import { ParsedMail, simpleParser } from 'mailparser';
 
 
