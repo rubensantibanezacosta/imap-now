@@ -17,6 +17,11 @@
   },
   "name": "imap-now",
   "author": "Rubén Santibáñez Acosta",
+  "description": "IMAP client for Node.js",
+  "peerDependencies": {
+    "imap": "^0.8.19",
+    "mailparser": "^3.6.5"
+  },
   "devDependencies": {
     "@types/imap": "^0.8.40",
     "@types/mailparser": "^3.4.4",
